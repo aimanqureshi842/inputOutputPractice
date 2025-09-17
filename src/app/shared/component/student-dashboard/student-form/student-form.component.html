@@ -1,7 +1,7 @@
 <form #stdForm="ngForm" (ngSubmit)="submitForm()">
     <div class="form-group">
         <label for="firstName">First Name <sup>*</sup></label>
-        <input type="text" required pattern="[A-Za-z]" ngModel #firstName="ngModel" name="firstName" id="firstName"
+        <input type="text" required pattern="^[A-Za-z]{2,30}$" ngModel #firstName="ngModel" name="firstName" id="firstName"
             class="form-control">
     </div>
     <strong class="text-danger" *ngIf="firstName.touched && firstName.hasError('required')">
@@ -12,7 +12,7 @@
 
     <div class="form-group">
         <label for="lastName">Last Name <sup>*</sup></label>
-        <input type="text" required pattern="[A-Za-z]" ngModel #lastName="ngModel" name="lastName" id="lastName"
+        <input type="text" required pattern="^[A-Za-z]{2,30}$" ngModel #lastName="ngModel" name="lastName" id="lastName"
             class="form-control">
     </div>
     <strong class="text-danger" *ngIf="lastName.touched && lastName.hasError('required')">

@@ -15,6 +15,7 @@ export class StudentFormComponent implements OnInit {
   ngOnInit(): void {
   }
   submitForm(){
+    console.log(this.stdForm.value)
     if(this.stdForm.valid){
    let newStd=(this.stdForm.value);
    newStd.salary=+this.stdForm.controls['salary'].value;
