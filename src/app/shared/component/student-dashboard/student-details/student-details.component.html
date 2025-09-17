@@ -1,0 +1,47 @@
+
+<table class="table table-bordered" *ngIf="employeesArray.length>0;else noStdAdded">
+    <thead>
+        <tr>
+            <th>Sr no</th>
+            <th>Full Name</th>
+            <th>Department</th>
+            <th>Position</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employeesArray; index as i">
+            <td>{{i+1}}</td>
+            <td>{{emp.firstName|titlecase}} {{emp.lastName|titlecase}}</td>
+            <td>{{emp.department|titlecase}}</td>
+            <td>{{emp.position|titlecase}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+    </tbody>
+</table>
+<ng-template #noStdAdded>
+<strong class="alert alert-info">No student added yet!!!</strong>
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
