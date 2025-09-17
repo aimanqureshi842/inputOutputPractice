@@ -8,20 +8,20 @@ import { Istudents } from 'src/app/shared/models/studentInterface';
   styleUrls: ['./student-form.component.scss']
 })
 export class StudentFormComponent implements OnInit {
-@Output() newStd:EventEmitter<Istudents>=new EventEmitter<Istudents>()
-@ViewChild('stdForm') stdForm!:NgForm
+  @Output() newStd: EventEmitter<Istudents> = new EventEmitter<Istudents>()
+  @ViewChild('stdForm') stdForm!: NgForm
   constructor() { }
 
   ngOnInit(): void {
   }
-  submitForm(){
-    console.log(this.stdForm.value)
-    if(this.stdForm.valid){
-   let newStd=(this.stdForm.value);
-   newStd.salary=+this.stdForm.controls['salary'].value;
-   this.newStd.emit(newStd);
-  }
-  this.stdForm.reset();
+  submitForm() {
+    // console.log(this.stdForm.value)
+    if (this.stdForm.valid) {
+      let newStd = (this.stdForm.value);
+      newStd.salary = +this.stdForm.controls['salary'].value;
+      this.newStd.emit(newStd);
+    }
+    this.stdForm.reset();
 
   }
 

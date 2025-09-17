@@ -1,8 +1,8 @@
 <form #stdForm="ngForm" (ngSubmit)="submitForm()">
     <div class="form-group">
         <label for="firstName">First Name <sup>*</sup></label>
-        <input type="text" required pattern="^[A-Za-z]{2,30}$" ngModel #firstName="ngModel" name="firstName" id="firstName"
-            class="form-control">
+        <input type="text" required pattern="^[A-Za-z]{2,30}$" ngModel #firstName="ngModel" name="firstName"
+            id="firstName" class="form-control">
     </div>
     <strong class="text-danger" *ngIf="firstName.touched && firstName.hasError('required')">
         This field is mandatory !

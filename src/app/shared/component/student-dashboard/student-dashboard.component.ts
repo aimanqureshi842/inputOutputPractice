@@ -8,14 +8,14 @@ import { employeesArr } from '../../const/student';
   styleUrls: ['./student-dashboard.component.scss']
 })
 export class StudentDashboardComponent implements OnInit {
-employees:Array<Istudents>=employeesArr;
+  employees: Array<Istudents> = employeesArr;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  addNewStd(std:Istudents){
-   this.employees.push(std)
+  addNewStd(std: Istudents) {
+    this.employees.push(std)
   }
 
 }
